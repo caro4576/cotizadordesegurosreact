@@ -1,66 +1,101 @@
-# Cotizador de Seguros - React
+🚗 Cotizador de Seguros – React
 
-Proyecto final para Untref  en **React**, migrado desde un proyecto original hecho para un curso de  **JavaScript puro con Tailwind CSS**. 
-Permite cotizar seguros de autos según la marca, año y tipo de cobertura. 
-Incluye interfaz interactiva con **spinner**, mensajes de error/éxito y resultados dinámicos.
+Proyecto final para UNTREF, migrado desde una versión hecha en JavaScript puro + Tailwind CSS hacia una arquitectura moderna en React + Vite.
+Permite cotizar seguros de autos según marca, año y tipo de cobertura, con un diseño responsive, animaciones y cálculos dinámicos.
 
- Tecnologías
+🔧 Tecnologías utilizadas
 
-- React 18
-- Tailwind CSS
-- JavaScript
-- CSS personalizado
-- Vite 
+React 18
+Vite
+Tailwind CSS
+JavaScript
+CSS personalizado
+HTML semántico
 
- Funcionalidades
 
-- Migración completa de un proyecto **JS + Tailwind** a **React moderno**.
-- Selección de **marca**, **año** y **tipo de seguro**.
-- Validación de campos obligatorios.
-- Cálculo dinámico del costo total según la marca, antigüedad y tipo de seguro.
-- **Spinner** de carga mientras se calcula el resultado.
-- Visualización del resultado con resumen detallado.
-- Mensajes de error y éxito estilizados.
-- Resultado desaparece automáticamente después de 10 segundos.
-- Diseño responsivo y moderno usando Tailwind CSS y CSS personalizado.
+✨ Funcionalidades principales
 
- Estructura del proyecto
+Migración completa desde un proyecto original en JavaScript + Tailwind hacia una arquitectura modular en React.
+Selección de marca, año y tipo de seguro.
+Validación de campos obligatorios.
+Cálculo dinámico del precio final según:
+ Marca del vehículo
+ Antigüedad
+ Tipo de cobertura
+Spinner animado durante el proceso de cálculo.
+Mensajes de error y éxito.
 
+Resumen detallado del resultado con transición de entrada (fade-in).
+El resultado desaparece automáticamente luego de 10 segundos.
+Diseño totalmente responsive, optimizado para móviles (incluyendo tamaños reducidos como iPhone SE).
+
+📁 Estructura del proyecto
 src/
 │
 ├─ components/
-│ ├─ Formulario.jsx # Formulario de entrada de datos
-│ ├─ Resultado.jsx # Muestra el resumen de la cotización
-│ ├─ Spinner.jsx # Componente spinner de carga
-│ └─ Header.jsx # Encabezado de la app
+│   ├─ Formulario.jsx       # Formulario principal
+│   ├─ Resultado.jsx        # Muestra el resumen de la cotización
+│   ├─ Spinner.jsx          # Indicador de carga animado
+│   └─ Header.jsx           # Encabezado de la aplicación
 │
 ├─ logica/
-│ └─ index.js # Funciones: calcular seguro, obtener marca, formatear dinero, obtener años
+│   └─ index.js             # Funciones: cálculo, formateo y utilidades
 │
-├─ index.css # Estilos globales + Tailwind
-├─ main.jsx (o index.jsx) # Entry point React
-└─ App.jsx # Componente principal
+├─ index.css                # Estilos globales + Tailwind
+├─ main.jsx                 # Punto de entrada de la app
+└─ App.jsx                  # Componente raíz
 
-🛠 Uso
+🛠️ Uso de la aplicación
 
-Seleccionar la marca del vehículo.
-
-Seleccionar el año del vehículo.
-
-Elegir el tipo de seguro (básico o completo).
-
+Seleccionar marca del vehículo.
+Elegir el año del modelo.
+Seleccionar el tipo de cobertura (básico o completo).
 Presionar "Cotizar Seguro".
+Ver el resultado junto con un resumen explicativo.
 
-Ver el resultado y esperar que desaparezca automáticamente luego de 10 segundos.
 
 🎨 Personalización
 
-Colores, tipografía y estilos se encuentran en index.css.
+Colores principales y tipografías en:
+👉 index.css
+Tailwind completamente integrado.
+Animaciones (@keyframes) personalizadas:(documentadas en el archivo)
+sk-stretchdelay
+girar
+fadeIn
 
-Tailwind está integrado, podés usar clases utilitarias directamente en tus componentes.
+Todo puede modificarse fácilmente.
+🚀 Deploy
+🔗 Versión online del proyecto:
+https://cotizadordesegurosreact-ca6vl9jda-carolina-bibbos-projects.vercel.app/
 
-Spinner y mensajes de error/éxito también son personalizables desde CSS.
+Instalación y ejecución local
+# Clonar el repositorio
+git clone https://github.com/caro4576/cotizadordesegurosreact.git
+
+# Entrar al proyecto
+cd cotizadordesegurosreact
+
+# Instalar dependencias
+npm install
+
+# Ejecutar en modo desarrollo
+npm run dev
 
 📄 Licencia
 
-Este proyecto es de uso personal y educativo.
+Proyecto de uso personal y educativo.
+
+🙌 Agradecimientos
+
+Este proyecto fue realizado como Trabajo Final para la Universidad Nacional de Tres de Febrero (UNTREF).
+Gracias a mis docentes y compañeros por el acompañamiento durante el cursado.
+
+👩‍💻 Autora
+
+Carolina
+Desarrolladora Frontend
+Proyecto Final – UNTREF
+📧carobibbo76@gmail.com
+
+
