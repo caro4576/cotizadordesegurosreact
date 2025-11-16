@@ -94,7 +94,7 @@ Gracias a mis docentes y compañeros por el acompañamiento durante el cursado.
 👩‍💻 Autora
 
 Carolina
-Desarrolladora Frontend
+Desarrolladora Frontend en formacion
 Proyecto Final – UNTREF
 📧carobibbo76@gmail.com
 
