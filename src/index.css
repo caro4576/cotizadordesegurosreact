@@ -1,0 +1,265 @@
+/* 🔹 Si después activás Tailwind, dejá las tres primeras líneas al principio */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primario: #9db099;
+  --secundario: #434055;
+  --blanco: #FFF;
+  --negro: #000;
+  --fuente:'Poppins','Segoe UI'
+
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:var(--fuente) ;
+  background:var(--secundario);
+  color: var(--negro);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/*  Contenedor principal */
+.contenedor-principal {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+/*Encabezado */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h2 {
+  margin: 0;
+  color:var(--secundario);
+}
+
+header p {
+  color:var(--secundario);
+  margin-top: 0.5rem;
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form label {
+  font-weight: 600;
+  color: #444;
+}
+
+form select,
+form input[type="number"],
+form input[type="text"] {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+fieldset {
+  border: none;
+  margin-top: 1rem;
+}
+
+legend {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/*  Botón */
+button {
+  background-color:var(--secundario);
+  color:var(--blanco);
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6A1DBA;
+}
+
+/*  Mensajes */
+.mensaje {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.error {
+  background-color: #FDECEA;
+  color: #B71C1C;
+  border: 1px solid #E53935;
+}
+
+.correcto {
+  background-color: #E8F5E9;
+  color: #1B5E20;
+  border: 1px solid #43A047;
+}
+
+/* 🔄 Spinner */
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner>div {
+  background-color:var(--primario);
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+.spinner .rect2 {
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  animation-delay: -0.8s;
+}
+/* 
+   ANIMACIÓN: sk-stretchdelay
+      - Genera un efecto de estiramiento vertical
+      - El elemento se comprime a 40% de su altura y luego se estira al 100%.
+      - Se usa comúnmente en loaders tipo "barra pulsante".
+   COMPORTAMIENTO:
+      0%, 40%, 100%  → el elemento está comprimido (scaleY 0.4)
+      20%            → el elemento se estira (scaleY 1.0) */
+@keyframes sk-stretchdelay {
+
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+  }
+
+  20% {
+    transform: scaleY(1.0);
+  }
+}
+
+/*
+   ANIMACIÓN: girar
+      - Realiza una rotación completa de 360 grados.
+      - Ideal para íconos de carga (spinners) o efectos de giro repetitivo.
+   COMPORTAMIENTO:
+      100% → el elemento ha rotado completamente en torno a su centro.*/
+@keyframes girar {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ /* ANIMACIÓN: fadeIn
+        - Hace aparecer el elemento suavemente.
+        - Combina aumento de opacidad con un desplazamiento vertical ascendente.
+        - Muy útil para transiciones de contenido, modales, cards, etc.
+     COMPORTAMIENTO:
+        from → opacidad 0 y desplazado 10px hacia abajo
+        to   → opacidad 1 en su posición original*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+<<<<<<< HEAD
+    transform: translateY(-6px);
+  }
+=======
+    transform: translateY(10px);
+  }
+
+>>>>>>> 00ed7ff6d6248a25f681ab320d7c12a9362e5f18
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+<<<<<<< HEAD
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+
+=======
+>>>>>>> 00ed7ff6d6248a25f681ab320d7c12a9362e5f18
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .contenedor-principal {
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
+     .spinner {
+       transform: scale(0.8);
+     }
+}
+@media (max-width: 430px) {
+  body {
+    font-size: 0.9rem;
+  }
+}
+/* 📱 Para pantallas muy pequeñas (iPhone SE, Android compactos) */
+@media (max-width: 375px) {
+
+  .contenedor-principal {
+    padding: 1rem;
+    margin-top: 0.8rem;
+  }
+
+  body {
+    font-size: 0.9rem;
+    /* Texto un poco más chico */
+  }
+
+  button {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  form label {
+    font-size: 0.95rem;
+  }
+
+  .spinner {
+    transform: scale(0.75);
+    /* Reduce el tamaño  */
+  }
+}
+
