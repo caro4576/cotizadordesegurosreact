@@ -1,4 +1,4 @@
-/* 🔹 Si después activás Tailwind, dejá las tres primeras líneas al principio */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -156,14 +156,7 @@ button:hover {
 .spinner .rect5 {
   animation-delay: -0.8s;
 }
-/* 
-   ANIMACIÓN: sk-stretchdelay
-      - Genera un efecto de estiramiento vertical
-      - El elemento se comprime a 40% de su altura y luego se estira al 100%.
-      - Se usa comúnmente en loaders tipo "barra pulsante".
-   COMPORTAMIENTO:
-      0%, 40%, 100%  → el elemento está comprimido (scaleY 0.4)
-      20%            → el elemento se estira (scaleY 1.0) */
+
 @keyframes sk-stretchdelay {
 
   0%,
@@ -177,24 +170,12 @@ button:hover {
   }
 }
 
-/*
-   ANIMACIÓN: girar
-      - Realiza una rotación completa de 360 grados.
-      - Ideal para íconos de carga (spinners) o efectos de giro repetitivo.
-   COMPORTAMIENTO:
-      100% → el elemento ha rotado completamente en torno a su centro.*/
 @keyframes girar {
   100% {
     transform: rotate(360deg);
   }
 }
- /* ANIMACIÓN: fadeIn
-        - Hace aparecer el elemento suavemente.
-        - Combina aumento de opacidad con un desplazamiento vertical ascendente.
-        - Muy útil para transiciones de contenido, modales, cards, etc.
-     COMPORTAMIENTO:
-        from → opacidad 0 y desplazado 10px hacia abajo
-        to   → opacidad 1 en su posición original*/
+ 
 @keyframes fadeIn {
   from {
     opacity: 0;
