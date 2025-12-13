@@ -3,8 +3,9 @@ import Header from "./components/Header";
 import Formulario from "./components/Formulario";
 import Resultado from "./components/Resultado";
 import Spinner from "./components/Spinner";
-import { obtenerNombreMarca, formatearDinero } from "./logica";
+import { obtenerNombreMarca, formatearDinero,calcularTotalSeguro } from "./logica";
 import { Save, History, Trash2 } from "lucide-react";
+
 
 function App() {
   const [cotizacion, setCotizacion] = useState({});
@@ -41,13 +42,14 @@ function App() {
     setCargando(true);
     setCotizacion({});
 
-    setTimeout(() => {
-      import("./logica").then(({ calcularTotalSeguro }) => {
-        const total = calcularTotalSeguro(datos);
-        setCargando(false);
-        setCotizacion({ total, datos });
-      });
-    }, 3000);
+ 
+
+  setTimeout(() => {
+    const total = calcularTotalSeguro(datos);
+    setCargando(false);
+    setCotizacion({ total, datos });
+  }, 3000);
+
   };
 
   const guardarCotizacion = () => {
