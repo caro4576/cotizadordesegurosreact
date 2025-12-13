@@ -70,15 +70,6 @@ La aplicación permite cotizar seguros de autos según **marca**, **año** y **t
 4. Presionar **"Cotizar Seguro"**.  
 5. Ver el resultado junto con un resumen explicativo.  
 
----
-
-## 🚀 Deploy
-
-🔗 **Versión online:**  
-[https://cotizadordesegurosreact-ca6vl9jda-carolina-bibbos-projects.vercel.app/](https://cotizadordesegurosreact-ca6vl9jda-carolina-bibbos-projects.vercel.app/)
-
----
-
 ## 🛠️ Instalación y ejecución local
 
 ```bash

@@ -3,7 +3,6 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://caro4576.github.io/cotizadordesegurosreact",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,7 +16,6 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
-    "gh-pages": "^6.3.0",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
     "vite": "^5.0.8"
