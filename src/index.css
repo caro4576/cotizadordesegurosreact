@@ -198,29 +198,19 @@ button:hover {
 @keyframes fadeIn {
   from {
     opacity: 0;
-<<<<<<< HEAD
-    transform: translateY(-6px);
-  }
-=======
     transform: translateY(10px);
   }
 
->>>>>>> 00ed7ff6d6248a25f681ab320d7c12a9362e5f18
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-<<<<<<< HEAD
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out;
 }
 
-
-=======
->>>>>>> 00ed7ff6d6248a25f681ab320d7c12a9362e5f18
-/* 📱 Responsive */
 @media (max-width: 600px) {
   .contenedor-principal {
     padding: 1.5rem;
