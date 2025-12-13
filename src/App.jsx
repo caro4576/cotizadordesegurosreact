@@ -1,26 +1,19 @@
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
-=======
-import { useState } from "react";
->>>>>>> 00ed7ff6d6248a25f681ab320d7c12a9362e5f18
 import Header from "./components/Header";
 import Formulario from "./components/Formulario";
 import Resultado from "./components/Resultado";
 import Spinner from "./components/Spinner";
-<<<<<<< HEAD
 import { obtenerNombreMarca, formatearDinero } from "./logica";
 import { Save, History, Trash2 } from "lucide-react";
 
 function App() {
-  // Estado para la cotización actual
   const [cotizacion, setCotizacion] = useState({});
   const [cargando, setCargando] = useState(false);
 
-  // Estados para historial
   const [historial, setHistorial] = useState([]);
   const [mostrarHistorial, setMostrarHistorial] = useState(false);
 
-  // 🔹 Cargar historial desde localStorage
+  // Cargar historial
   useEffect(() => {
     const historialGuardado = JSON.parse(
       localStorage.getItem("historialCotizaciones")
@@ -30,7 +23,7 @@ function App() {
     }
   }, []);
 
-  // 🔹 Limpiar la cotización actual luego de 10s
+  // Limpiar cotización a los 10s
   useEffect(() => {
     if (cotizacion.total) {
       const timer = setTimeout(() => {
@@ -40,21 +33,10 @@ function App() {
     }
   }, [cotizacion]);
 
-=======
-
-function App() {
-  // Estado para la cotización
-  const [cotizacion, setCotizacion] = useState({});
-  const [cargando, setCargando] = useState(false);
-
-  //función para borrar el resultado
->>>>>>> 00ed7ff6d6248a25f681ab320d7c12a9362e5f18
   const limpiarResultado = () => {
     setCotizacion({});
   };
 
-<<<<<<< HEAD
-  // 🔹 Cotizar seguro
   const cotizarSeguro = (datos) => {
     setCargando(true);
     setCotizacion({});
@@ -64,31 +46,10 @@ function App() {
         const total = calcularTotalSeguro(datos);
         setCargando(false);
         setCotizacion({ total, datos });
-=======
-  // La función principal que se llamará al enviar el formulario
-  const cotizarSeguro = (datos) => {
-    // 1. Mostrar spinner
-    setCargando(true);
-    setCotizacion({}); // Limpiar resultado anterior
-
-    // 2. Ejecutar la cotización
-    setTimeout(() => {
-      import("./logica").then(({ calcularTotalSeguro }) => {
-        const total = calcularTotalSeguro(datos);
-
-        // 3. Ocultar spinner y guardar resultado
-        setCargando(false);
-        setCotizacion({
-          total,
-          datos,
-        });
->>>>>>> 00ed7ff6d6248a25f681ab320d7c12a9362e5f18
       });
     }, 3000);
   };
 
-<<<<<<< HEAD
-  // 🔹 Guardar cotización
   const guardarCotizacion = () => {
     if (!cotizacion.total) return;
 
@@ -110,21 +71,17 @@ function App() {
     );
   };
 
-  // 🔹 Limpiar historial
   const limpiarHistorial = () => {
     setHistorial([]);
     localStorage.removeItem("historialCotizaciones");
   };
 
-=======
->>>>>>> 00ed7ff6d6248a25f681ab320d7c12a9362e5f18
   return (
     <div className="contenedor-principal mx-auto">
       <div id="contenido" className="pb-10">
         <Header />
 
         <Formulario cotizarSeguro={cotizarSeguro} />
-<<<<<<< HEAD
 
         {cargando ? (
           <Spinner />
@@ -135,7 +92,6 @@ function App() {
               limpiarResultado={limpiarResultado}
             />
 
-            {/* Botones */}
             <div className="mt-6 flex items-center gap-4">
               {cotizacion.total && (
                 <button
@@ -157,7 +113,6 @@ function App() {
               </button>
             </div>
 
-            {/* Historial */}
             {mostrarHistorial && (
               <div className="mt-6 bg-white p-4 rounded-lg shadow-sm animate-fadeIn">
                 <div className="flex items-center justify-between mb-3">
@@ -194,14 +149,6 @@ function App() {
             )}
           </>
         )}
-=======
-{cargando ? (
-  <Spinner />
-) : (
-  <Resultado cotizacion={cotizacion} limpiarResultado={limpiarResultado} />
-)}
-
->>>>>>> 00ed7ff6d6248a25f681ab320d7c12a9362e5f18
       </div>
     </div>
   );
